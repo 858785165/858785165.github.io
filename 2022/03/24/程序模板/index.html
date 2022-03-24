@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon1.png">
+  <link rel="icon" href="/img/favicon1.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="junjia wei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="模板MAIN按键检测123456789101112131415161718192021222324252627282930313233343536373839404142434445void check_key(void)		&amp;#123;	uint get_key&#x3D;0;	uint key_down&#x3D;0;	bit key_long_down&#x3D;0;		key_state&#x3D;0;		get_key&#x3D;key">
+<meta property="og:type" content="article">
+<meta property="og:title" content="程序模板">
+<meta property="og:url" content="http://example.com/2022/03/24/%E7%A8%8B%E5%BA%8F%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:site_name" content="JUNJIA">
+<meta property="og:description" content="模板MAIN按键检测123456789101112131415161718192021222324252627282930313233343536373839404142434445void check_key(void)		&amp;#123;	uint get_key&#x3D;0;	uint key_down&#x3D;0;	bit key_long_down&#x3D;0;		key_state&#x3D;0;		get_key&#x3D;key">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-24T11:54:30.000Z">
+<meta property="article:modified_time" content="2022-03-24T12:04:06.182Z">
+<meta property="article:author" content="junjia wei">
+<meta property="article:tag" content="蓝桥杯">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>程序模板 - JUNJIA</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>JUNJIA</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="http://42.192.93.193">
+                <i class="iconfont icon-link-fill"></i>
+                blog
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default0.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="程序模板">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-24 19:54" pubdate>
+        March 24, 2022 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      80 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">程序模板</h1>
+            
+            <div class="markdown-body">
+              <h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><h2 id="MAIN"><a href="#MAIN" class="headerlink" title="MAIN"></a>MAIN</h2><h3 id="按键检测"><a href="#按键检测" class="headerlink" title="按键检测"></a>按键检测</h3><figure class="highlight c"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></div></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">check_key</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<br>&#123;<br>	uint get_key=<span class="hljs-number">0</span>;<br>	uint key_down=<span class="hljs-number">0</span>;<br>	bit key_long_down=<span class="hljs-number">0</span>;<br>	<br>	key_state=<span class="hljs-number">0</span>;	<br>	get_key=keyscan();<br><span class="hljs-comment">//	get_key=keyscan_16();</span><br>	key_down=key_state;<br>		<br>	<span class="hljs-keyword">if</span>(key_down&gt;=<span class="hljs-number">8</span>)<br>		key_long_down=<span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">else</span><br>		key_long_down=<span class="hljs-number">0</span>;<br>	<br>	<span class="hljs-keyword">if</span>(get_key==<span class="hljs-number">4</span> &amp;&amp; key_long_down==<span class="hljs-number">0</span>)		<span class="hljs-comment">//短按S4</span><br>	&#123;<br>		P2=<span class="hljs-number">0x80</span>;P0=<span class="hljs-number">0xfe</span>;	<span class="hljs-comment">//LED1点亮</span><br>		get_dis_flag=<span class="hljs-number">1</span>;		<span class="hljs-comment">//触发超声波测距</span><br>	&#125;	<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(get_key==<span class="hljs-number">4</span> &amp;&amp; key_long_down==<span class="hljs-number">1</span>)	<span class="hljs-comment">//长按S4</span><br>	&#123;<br>		key_long_down=<span class="hljs-number">0</span>;<br>		P2=<span class="hljs-number">0x80</span>;P0=<span class="hljs-number">0xfd</span>;	<span class="hljs-comment">//LED2点亮</span><br>		get_dis_flag=<span class="hljs-number">1</span>;		<span class="hljs-comment">//触发超声波测距</span><br>	&#125;<br>	<br>	<span class="hljs-keyword">if</span>(get_key==<span class="hljs-number">5</span>)			<span class="hljs-comment">//单击S5</span><br>	&#123;<br>		P2=<span class="hljs-number">0x80</span>;P0=<span class="hljs-number">0xfb</span>;	<span class="hljs-comment">//LED3点亮</span><br>		get_dis_flag=<span class="hljs-number">1</span>;		<span class="hljs-comment">//触发超声波测距</span><br>	&#125;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(get_key==<span class="hljs-number">55</span>)	<span class="hljs-comment">//双击S5</span><br>	&#123;<br>		P2=<span class="hljs-number">0x80</span>;P0=<span class="hljs-number">0xf7</span>;	<span class="hljs-comment">//LED4点亮</span><br>		get_dis_flag=<span class="hljs-number">1</span>;		<span class="hljs-comment">//触发超声波测距</span><br>	&#125;<br>	<br><span class="hljs-comment">//	if(get_key!=0)			//显示键值</span><br><span class="hljs-comment">//	&#123;</span><br><span class="hljs-comment">//		Digbuf[6]=get_key/10;</span><br><span class="hljs-comment">//		Digbuf[7]=get_key%10;</span><br><span class="hljs-comment">//	&#125;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="串口检测"><a href="#串口检测" class="headerlink" title="串口检测"></a>串口检测</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">Uart_check</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<br>&#123;<br>	<span class="hljs-keyword">if</span>(uart_num&gt;<span class="hljs-number">0</span>)<br>	&#123;<br>		<span class="hljs-keyword">if</span>(uart_receive_buf[uart_num<span class="hljs-number">-1</span>]==<span class="hljs-number">0xa</span>)<br>		&#123;<br>			<span class="hljs-keyword">if</span>((uart_receive_buf[<span class="hljs-number">0</span>]==<span class="hljs-string">&#x27;S&#x27;</span>) &amp;&amp; (uart_receive_buf[<span class="hljs-number">1</span>]==<span class="hljs-string">&#x27;T&#x27;</span>) &amp;&amp; (uart_receive_buf[<span class="hljs-number">2</span>]==<span class="hljs-number">0xd</span>))<br>			&#123;<br>				<span class="hljs-built_in">sprintf</span>(uart_send_buf,<span class="hljs-string">&quot;Uart TEXT\r\n&quot;</span>);<br>			&#125;<br>			<span class="hljs-keyword">else</span><br>				<span class="hljs-built_in">sprintf</span>(uart_send_buf,<span class="hljs-string">&quot;ERROR\r\n&quot;</span>);<br>			<br>			UartSendStr(uart_send_buf);<br>			uart_num=<span class="hljs-number">0</span>;<br>		&#125;<br>		<span class="hljs-keyword">else</span>			<br>		&#123;<br>			<span class="hljs-keyword">if</span>(uart_num==<span class="hljs-number">6</span>)<br>			&#123;<br>				<span class="hljs-built_in">sprintf</span>(uart_send_buf,<span class="hljs-string">&quot;ERROR\r\n&quot;</span>);<br>				UartSendStr(uart_send_buf);<br>				uart_num=<span class="hljs-number">0</span>;<br>			&#125;<br>		&#125;	<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="PERSON"><a href="#PERSON" class="headerlink" title="PERSON"></a>PERSON</h2><h3 id="超声波测距"><a href="#超声波测距" class="headerlink" title="超声波测距"></a>超声波测距</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs c">sbit TX=P1^<span class="hljs-number">0</span>;<br>sbit RX=P1^<span class="hljs-number">1</span>;<br><br>uint <span class="hljs-title function_">get_distance</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<br>&#123;<br>	uint distance,time;<br>	<br>	send_wave();<br>	TR0=<span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">while</span>(RX==<span class="hljs-number">1</span> &amp;&amp; TF0==<span class="hljs-number">0</span>);<br>	TR0=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">if</span>(TF0==<span class="hljs-number">1</span>)<br>	&#123;<br>		TF0=<span class="hljs-number">0</span>;<br>		distance=<span class="hljs-number">999</span>;<br>	&#125;<br>	<span class="hljs-keyword">else</span><br>	&#123;<br>		time=TH0*<span class="hljs-number">256</span>+TL0;<br>		distance=(uint)time*<span class="hljs-number">0.017</span>;<br>		distance=distance/<span class="hljs-number">12</span>;<br>	&#125;<br>	TH0=<span class="hljs-number">0</span>;TL0=<span class="hljs-number">0</span>;<br>	<br>	<span class="hljs-keyword">return</span> distance;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">send_wave</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//发送40KHz方波</span><br>&#123;<br>	uchar i=<span class="hljs-number">8</span>;<br>	<span class="hljs-keyword">do</span><br>	&#123;<br>		TX=<span class="hljs-number">1</span>;<br>		somenop;somenop;somenop;somenop;somenop;<br>		somenop;somenop;somenop;somenop;somenop;<br>		TX=<span class="hljs-number">0</span>;<br>		somenop;somenop;somenop;somenop;somenop;<br>		somenop;somenop;somenop;somenop;somenop;<br>	&#125;<br>	<span class="hljs-keyword">while</span>(i--);<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">Timer0Init</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//计数@12.000MHz</span><br>&#123;<br>	AUXR |= <span class="hljs-number">0x80</span>;		<span class="hljs-comment">//定时器时钟1T模式</span><br>	TMOD &amp;= <span class="hljs-number">0xF0</span>;		<span class="hljs-comment">//设置定时器模式</span><br>	TL0 = <span class="hljs-number">0</span>;		<span class="hljs-comment">//设置定时初值</span><br>	TH0 = <span class="hljs-number">0</span>;		<span class="hljs-comment">//设置定时初值</span><br>	TF0 = <span class="hljs-number">0</span>;		<span class="hljs-comment">//清除TF0标志</span><br><span class="hljs-comment">//	TR0 = 1;		//定时器0开始计时</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="串口"><a href="#串口" class="headerlink" title="串口"></a>串口</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">UartSendStr</span><span class="hljs-params">(uchar *Str)</span>	<span class="hljs-comment">//串口发送</span><br>&#123;<br>	ES=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span>(*Str!=<span class="hljs-number">0</span>)<br>	&#123;<br>		SBUF=*Str;<br>		<span class="hljs-keyword">while</span>(TI==<span class="hljs-number">0</span>);<br>		TI=<span class="hljs-number">0</span>;<br>		Str++;<br>	&#125;<br>	ES=<span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">UartInt</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> interrupt 4	<span class="hljs-comment">//串口中断</span><br>&#123;<br>	<span class="hljs-keyword">if</span>(RI)<br>	&#123;<br>		RI=<span class="hljs-number">0</span>;<br>		uart_receive_buf[uart_num++]=SBUF;<br>	&#125;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">UartInit</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//4800bps@12.000MHz</span><br>&#123;<br>	SCON = <span class="hljs-number">0x50</span>;		<span class="hljs-comment">//8位数据,可变波特率</span><br>	AUXR |= <span class="hljs-number">0x40</span>;		<span class="hljs-comment">//定时器1时钟为Fosc,即1T</span><br>	AUXR &amp;= <span class="hljs-number">0xFE</span>;		<span class="hljs-comment">//串口1选择定时器1为波特率发生器</span><br>	TMOD &amp;= <span class="hljs-number">0x0F</span>;		<span class="hljs-comment">//设定定时器1为16位自动重装方式</span><br>	TL1 = <span class="hljs-number">0x8F</span>;		<span class="hljs-comment">//设定定时初值</span><br>	TH1 = <span class="hljs-number">0xFD</span>;		<span class="hljs-comment">//设定定时初值</span><br>	ET1 = <span class="hljs-number">0</span>;		<span class="hljs-comment">//禁止定时器1中断</span><br>	TR1 = <span class="hljs-number">1</span>;		<span class="hljs-comment">//启动定时器1</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="独立按键"><a href="#独立按键" class="headerlink" title="独立按键"></a>独立按键</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs c">uchar <span class="hljs-title function_">keyscan</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<br>&#123;<br>	uchar key=<span class="hljs-number">0</span>;<br>	uchar time_span=<span class="hljs-number">10</span>;<br>	<br>	<span class="hljs-keyword">if</span>(P30==<span class="hljs-number">0</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		<span class="hljs-keyword">if</span>(P30==<span class="hljs-number">0</span>)<br>		&#123;<br>			key=<span class="hljs-number">7</span>;<br>			<span class="hljs-keyword">while</span>(P30==<span class="hljs-number">0</span>);<br>		&#125;<br>	&#125;<br>	<br>	<span class="hljs-keyword">if</span>(P31==<span class="hljs-number">0</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		<span class="hljs-keyword">if</span>(P31==<span class="hljs-number">0</span>)<br>		&#123;<br>			key=<span class="hljs-number">6</span>;<br>			<span class="hljs-keyword">while</span>(P31==<span class="hljs-number">0</span>);<br>		&#125;<br>	&#125;<br>	<br>	<span class="hljs-keyword">if</span>(P32==<span class="hljs-number">0</span>)				<span class="hljs-comment">//带有按键单、双击检测</span><br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		<span class="hljs-keyword">if</span>(P32==<span class="hljs-number">0</span>)<br>		&#123;<br>			key=<span class="hljs-number">5</span>;<br>			<span class="hljs-keyword">while</span>(P32==<span class="hljs-number">0</span>);<span class="hljs-comment">//松手检测</span><br>			<br>			delayms(<span class="hljs-number">100</span>);<span class="hljs-comment">//双击按键间隔</span><br>			<span class="hljs-keyword">while</span>(time_span--)<span class="hljs-comment">//是否第二次按下</span><br>			&#123;<br>				<span class="hljs-keyword">if</span>(P32==<span class="hljs-number">0</span>)<br>				&#123;<br>					key=<span class="hljs-number">55</span>;<br>					<span class="hljs-keyword">while</span>(P32==<span class="hljs-number">0</span>);<span class="hljs-comment">//松手检测</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<br>	<span class="hljs-keyword">if</span>(P33==<span class="hljs-number">0</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		<span class="hljs-keyword">if</span>(P33==<span class="hljs-number">0</span>)<br>		&#123;<br>			key=<span class="hljs-number">4</span>;<br>			<span class="hljs-keyword">while</span>(P33==<span class="hljs-number">0</span>);<br>		&#125;<br>	&#125;<br>			<br>	<span class="hljs-keyword">return</span> key;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="矩阵按键"><a href="#矩阵按键" class="headerlink" title="矩阵按键"></a>矩阵按键</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><code class="hljs c">uchar <span class="hljs-title function_">keyscan_16</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<br>&#123;<br>	uchar key=<span class="hljs-number">0</span>;<br>	uchar temp;<br>	<br>	P3 = <span class="hljs-number">0x7f</span>;P44 = <span class="hljs-number">0</span>;P42 = <span class="hljs-number">1</span>;<br>	temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>	<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>		<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>		&#123;<br>			temp = P3;<br>			<span class="hljs-keyword">switch</span>(temp)<br>			&#123;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0x7e</span>: key = <span class="hljs-number">7</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0x7d</span>: key = <span class="hljs-number">6</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0x7b</span>: key = <span class="hljs-number">5</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0x77</span>: key = <span class="hljs-number">4</span>; <span class="hljs-keyword">break</span>;<br>			&#125;<br>			<span class="hljs-keyword">while</span>(temp != <span class="hljs-number">0x0f</span>)<br>			&#123;<br>				temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>			&#125;<br>		&#125;	<br>	&#125;<br><br>	P3 = <span class="hljs-number">0xbf</span>;P44 = <span class="hljs-number">1</span>;P42 = <span class="hljs-number">0</span>;<br>	temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>	<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>		<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>		&#123;<br>			temp = P3;<br>			<span class="hljs-keyword">switch</span>(temp)<br>			&#123;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xbe</span>: key = <span class="hljs-number">11</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xbd</span>: key = <span class="hljs-number">10</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xbb</span>: key = <span class="hljs-number">9</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xb7</span>: key = <span class="hljs-number">8</span>; <span class="hljs-keyword">break</span>;<br>			&#125;<br>			<span class="hljs-keyword">while</span>(temp != <span class="hljs-number">0x0f</span>)<br>			&#123;<br>				temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>			&#125;<br>		&#125;	<br>	&#125;<br><br>	P3 = <span class="hljs-number">0xdf</span>;P44 = <span class="hljs-number">1</span>;P42 = <span class="hljs-number">1</span>;<br>	temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>	<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>		<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>		&#123;<br>			temp = P3;<br>			<span class="hljs-keyword">switch</span>(temp)<br>			&#123;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xde</span>: key = <span class="hljs-number">15</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xdd</span>: key = <span class="hljs-number">14</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xdb</span>: key = <span class="hljs-number">13</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xd7</span>: key = <span class="hljs-number">12</span>; <span class="hljs-keyword">break</span>;<br>			&#125;<br>			<span class="hljs-keyword">while</span>(temp != <span class="hljs-number">0x0f</span>)<br>			&#123;<br>				temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>			&#125;<br>		&#125;<br>	&#125;<br><br>	P3 = <span class="hljs-number">0xef</span>;P44 = <span class="hljs-number">1</span>;P42 = <span class="hljs-number">1</span>;<br>	temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>	<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>	&#123;<br>		delayms(<span class="hljs-number">5</span>);<br>		temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>		<span class="hljs-keyword">if</span>(temp != <span class="hljs-number">0x0f</span>)<br>		&#123;<br>			temp = P3;<br>			<span class="hljs-keyword">switch</span>(temp)<br>			&#123;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xee</span>: key = <span class="hljs-number">19</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xed</span>: key = <span class="hljs-number">18</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xeb</span>: key = <span class="hljs-number">17</span>; <span class="hljs-keyword">break</span>;<br>				<span class="hljs-keyword">case</span> <span class="hljs-number">0xe7</span>: key = <span class="hljs-number">16</span>; <span class="hljs-keyword">break</span>;<br>			&#125;<br>			<span class="hljs-keyword">while</span>(temp != <span class="hljs-number">0x0f</span>)<br>			&#123;<br>				temp = P3&amp;<span class="hljs-number">0x0f</span>;<br>			&#125;<br>		&#125;	<br>	&#125;	<br>	<br>	<span class="hljs-keyword">return</span> key;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="NE555频率检测"><a href="#NE555频率检测" class="headerlink" title="NE555频率检测"></a>NE555频率检测</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">Timer1Int</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> interrupt 3<br>&#123;<br>	NE555_Time++;<br>	<span class="hljs-keyword">if</span>(NE555_Time==<span class="hljs-number">250</span>)		<span class="hljs-comment">//500毫秒</span><br>	&#123;<br>		NE555_Time=<span class="hljs-number">0</span>;<br>		NE555_Frequency=NE555_Falling*<span class="hljs-number">2</span>;<br>		NE555_Falling=<span class="hljs-number">0</span>;<br>	&#125;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">Timer0Int</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> interrupt 1<br>&#123;<br>	NE555_Falling++;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">Timer1Init</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//2毫秒@12.000MHz</span><br>&#123;<br>	AUXR |= <span class="hljs-number">0x40</span>;		<span class="hljs-comment">//定时器时钟1T模式</span><br>	TMOD &amp;= <span class="hljs-number">0x0F</span>;		<span class="hljs-comment">//设置定时器模式</span><br>	TL1 = <span class="hljs-number">0x40</span>;		<span class="hljs-comment">//设置定时初值</span><br>	TH1 = <span class="hljs-number">0xA2</span>;		<span class="hljs-comment">//设置定时初值</span><br>	TF1 = <span class="hljs-number">0</span>;		<span class="hljs-comment">//清除TF1标志</span><br>	TR1 = <span class="hljs-number">1</span>;		<span class="hljs-comment">//定时器1开始计时</span><br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">Timer0Init</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//计数器@12.000MHz</span><br>&#123;<br>	AUXR |= <span class="hljs-number">0x80</span>;		<span class="hljs-comment">//定时器时钟1T模式</span><br>	TMOD &amp;= <span class="hljs-number">0xF0</span>;		<span class="hljs-comment">//设置定时器模式</span><br>	TMOD |= <span class="hljs-number">0x06</span>;		<span class="hljs-comment">//设置定时器模式</span><br>	TL0 = <span class="hljs-number">0xFF</span>;		<span class="hljs-comment">//设置定时初值</span><br>	TH0 = <span class="hljs-number">0xFF</span>;		<span class="hljs-comment">//设置定时重载值</span><br>	TF0 = <span class="hljs-number">0</span>;		<span class="hljs-comment">//清除TF0标志</span><br>	TR0 = <span class="hljs-number">1</span>;		<span class="hljs-comment">//定时器0开始计时</span><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="定时器2"><a href="#定时器2" class="headerlink" title="定时器2"></a>定时器2</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">Timer2Int</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> interrupt 12<br>&#123;<br>	<span class="hljs-type">static</span> uint intr2=<span class="hljs-number">0</span>;<br><br>	<span class="hljs-comment">//数码管显示</span><br>	P2&amp;=<span class="hljs-number">0x1f</span>;P2|=<span class="hljs-number">0xc0</span>;		<span class="hljs-comment">//打开位选</span><br>	P0=(<span class="hljs-number">1</span>&lt;&lt;Digcom);<br>	P2&amp;=<span class="hljs-number">0x1f</span>;P2|=<span class="hljs-number">0xe0</span>;		<span class="hljs-comment">//打开段选</span><br>	P0=tab[Digbuf[Digcom]];<br>	<span class="hljs-keyword">if</span>(++Digcom==<span class="hljs-number">8</span>)<br>		Digcom=<span class="hljs-number">0</span>;<br>	P2&amp;=<span class="hljs-number">0x1f</span>;				<span class="hljs-comment">//关锁存</span><br><br>	<span class="hljs-comment">//按键辅助</span><br>	intr2++;				<br>	<span class="hljs-keyword">if</span>(intr2==<span class="hljs-number">50</span>)<br>	&#123;<br>		intr2=<span class="hljs-number">0</span>;<br>		key_state++;		<span class="hljs-comment">//按键按下时间</span><br>		<span class="hljs-keyword">if</span>(key_state==<span class="hljs-number">150</span>)<br>			key_state=<span class="hljs-number">0</span>;<br>	&#125;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">Timer2Init</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//2毫秒@12.000MHz</span><br>&#123;<br>	AUXR |= <span class="hljs-number">0x04</span>;		<span class="hljs-comment">//定时器时钟1T模式</span><br>	T2L = <span class="hljs-number">0x40</span>;		<span class="hljs-comment">//设置定时初值</span><br>	T2H = <span class="hljs-number">0xA2</span>;		<span class="hljs-comment">//设置定时初值</span><br>	AUXR |= <span class="hljs-number">0x10</span>;		<span class="hljs-comment">//定时器2开始计时</span><br>	<br>	IE2|=<span class="hljs-number">0x04</span>;	<span class="hljs-comment">//打开定时器2中断</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="数码管显示"><a href="#数码管显示" class="headerlink" title="数码管显示"></a>数码管显示</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">display</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-keyword">for</span>(Digcom=<span class="hljs-number">0</span>;Digcom&lt;<span class="hljs-number">8</span>;Digcom++)<br>	&#123;<br>		P2&amp;=<span class="hljs-number">0x1f</span>;P2|=<span class="hljs-number">0xc0</span>;		<span class="hljs-comment">//打开位选</span><br>		P0=(<span class="hljs-number">1</span>&lt;&lt;Digcom);<br>		P2&amp;=<span class="hljs-number">0x1f</span>;P2|=<span class="hljs-number">0xe0</span>;		<span class="hljs-comment">//打开段选</span><br>		P0=tab[Digbuf[Digcom]];<br>		P2&amp;=<span class="hljs-number">0x1f</span>;				<span class="hljs-comment">//关锁存</span><br>		delayms(<span class="hljs-number">1</span>);<br>	&#125;<br>	P2&amp;=<span class="hljs-number">0x1f</span>;P2|=<span class="hljs-number">0xc0</span>;P0=<span class="hljs-number">0xff</span>;<span class="hljs-comment">//选中所有数码管</span><br>	P2&amp;=<span class="hljs-number">0x1f</span>;P2|=<span class="hljs-number">0xe0</span>;P0=<span class="hljs-number">0xff</span>;<span class="hljs-comment">//关闭所有数码管</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">allinit</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>		<span class="hljs-comment">//初始化</span><br>&#123;<br>	P2=<span class="hljs-number">0xa0</span>;P0=<span class="hljs-number">0x00</span>;	<span class="hljs-comment">//关蜂鸣器、继电器</span><br>	P2=<span class="hljs-number">0x80</span>;P0=<span class="hljs-number">0xff</span>;	<span class="hljs-comment">//关LED</span><br>	P2=<span class="hljs-number">0xc0</span>;P0=<span class="hljs-number">0xff</span>;	<span class="hljs-comment">//关数码管</span><br>	P2=<span class="hljs-number">0xe0</span>;P0=<span class="hljs-number">0xff</span>;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">delayms</span><span class="hljs-params">(uint ms)</span>	<span class="hljs-comment">//延时函数</span><br>&#123;<br>	<span class="hljs-keyword">while</span>(ms--)<br>		Delay1ms();<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">Delay1ms</span><span class="hljs-params">()</span>		<span class="hljs-comment">//@12.000MHz</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> i, j;<br><br>	i = <span class="hljs-number">12</span>;<br>	j = <span class="hljs-number">169</span>;<br>	<span class="hljs-keyword">do</span><br>	&#123;<br>		<span class="hljs-keyword">while</span> (--j);<br>	&#125; <span class="hljs-keyword">while</span> (--i);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="ONEWIRE"><a href="#ONEWIRE" class="headerlink" title="ONEWIRE"></a>ONEWIRE</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> <span class="hljs-title function_">rd_temperature</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>	<span class="hljs-comment">//获取温度</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> MSB,LSB;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> temp;<br>	<br>	init_ds18b20();			<span class="hljs-comment">//DS18B20设备初始化</span><br>	Write_DS18B20(<span class="hljs-number">0xcc</span>);	<span class="hljs-comment">//跳过ROM操作命令，忽略64为ROM地址</span><br>	Write_DS18B20(<span class="hljs-number">0x44</span>);	<span class="hljs-comment">//发送启动温度转换命令</span><br>	Delay_OneWire(<span class="hljs-number">20</span>);		<span class="hljs-comment">//总线延时</span><br>	<br>	init_ds18b20();			<span class="hljs-comment">//DS18B20设备初始化</span><br>	Write_DS18B20(<span class="hljs-number">0xcc</span>);	<span class="hljs-comment">//跳过ROM操作命令，忽略64为ROM地址</span><br>	Write_DS18B20(<span class="hljs-number">0xbe</span>);	<span class="hljs-comment">//发送读温度寄存器命令</span><br>	<br>	LSB = Read_DS18B20();	<span class="hljs-comment">//先读低八位</span><br>	MSB = Read_DS18B20();	<span class="hljs-comment">//再读高八位</span><br>	<br>	temp = (MSB&lt;&lt;<span class="hljs-number">8</span>)|(LSB); 	<span class="hljs-comment">//高8位为MSB的值，低8位为LSB的值  </span><br>	<br>	<span class="hljs-keyword">return</span> temp;			<span class="hljs-comment">//返回温度值</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> <span class="hljs-title function_">get_temper</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>	<span class="hljs-comment">//温度转换</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> temper;<br>	<span class="hljs-type">float</span> tp;<br>	<br>	temper = rd_temperature();	<span class="hljs-comment">//获取温度</span><br>	<br>	<span class="hljs-keyword">if</span>(temper &lt; <span class="hljs-number">0</span>)			<span class="hljs-comment">//考虑负温度的情况</span><br>	&#123;<br>		temper = temper<span class="hljs-number">-1</span>;<br>		temper = ~temper;<br>	&#125;<br>	tp = temper*<span class="hljs-number">0.0625</span>;		<span class="hljs-comment">//16位温度转换成10进制的温度</span><br>	temper = tp*<span class="hljs-number">100</span>+<span class="hljs-number">0.5</span>;	<span class="hljs-comment">//保留两个小数点，并四舍五入</span><br>	<br>	<span class="hljs-keyword">return</span> temper;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//以下两个函数极少用到</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">Write_DS18B20_Data</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> dataH,<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> dataL)</span><br>&#123;<br>	init_ds18b20();			<span class="hljs-comment">//DS18B20设备初始化</span><br>	<br>	Write_DS18B20(<span class="hljs-number">0xcc</span>);	<span class="hljs-comment">//跳过ROM操作，忽略64为ROM地址</span><br>	Write_DS18B20(<span class="hljs-number">0x4e</span>);	<span class="hljs-comment">//写暂存器指令4E</span><br>	Write_DS18B20(dataH);	<span class="hljs-comment">//写高速缓存器TH高温限值dataH度</span><br>	Write_DS18B20(dataL);	<span class="hljs-comment">//写高速缓存器TL低温限值dataL度</span><br>	Write_DS18B20(<span class="hljs-number">0x7f</span>);	<span class="hljs-comment">//写配置寄存器4</span><br>							<span class="hljs-comment">//0x1f ： 0.5000°C  转换时间93.75ms</span><br>							<span class="hljs-comment">//0x3f ： 0.2000°C  转换时间187.5ms</span><br>							<span class="hljs-comment">//0x5f ： 0.1250°C  转换时间375ms</span><br>							<span class="hljs-comment">//0x7f ： 0.0625°C  转换时间750ms</span><br>	Delay_OneWire(<span class="hljs-number">20</span>);		<span class="hljs-comment">//总线延时</span><br>	<br>	init_ds18b20();			<span class="hljs-comment">//DS18B20设备初始化</span><br>	Write_DS18B20(<span class="hljs-number">0xcc</span>);	<span class="hljs-comment">//跳过ROM操作，忽略64为ROM地址</span><br>	Write_DS18B20(<span class="hljs-number">0x48</span>);	<span class="hljs-comment">//将写入的3字节暂存器的值写入到EEPROM，防止掉电丢失</span><br>	Delay_OneWire(<span class="hljs-number">20</span>);		<span class="hljs-comment">//总线延时</span><br><br>	init_ds18b20();			<span class="hljs-comment">//DS18B20设备初始化</span><br>	Write_DS18B20(<span class="hljs-number">0xcc</span>);	<span class="hljs-comment">//跳过ROM操作，忽略64为ROM地址</span><br>	Write_DS18B20(<span class="hljs-number">0xb8</span>);	<span class="hljs-comment">//重调EEPROM指令</span><br>	Delay_OneWire(<span class="hljs-number">20</span>);		<span class="hljs-comment">//总线延时</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> <span class="hljs-title function_">Read_DS18B20_Data</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> tp,dataH,dataL;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">int</span> temp;<br>	<br>	init_ds18b20();				<span class="hljs-comment">//DS18B20设备初始化</span><br>	Write_DS18B20(<span class="hljs-number">0xcc</span>);		<span class="hljs-comment">//跳过ROM操作命令</span><br>	Write_DS18B20(<span class="hljs-number">0xbe</span>);		<span class="hljs-comment">//发送读温度寄存器命令</span><br>	<br>	tp = Read_DS18B20();		<span class="hljs-comment">//先读低八位</span><br>	tp = Read_DS18B20();		<span class="hljs-comment">//再读高八位</span><br>	<br>	dataH = Read_DS18B20();		<span class="hljs-comment">//读高八位暂存器</span><br>	dataL = Read_DS18B20();		<span class="hljs-comment">//读低八位暂存器</span><br>	<br>	temp = (dataH&lt;&lt;<span class="hljs-number">8</span>)|(dataL); 	<span class="hljs-comment">//高8位为addrH的值，低8位为addrL的值  </span><br>	<br>	<span class="hljs-keyword">return</span> temp;				<span class="hljs-comment">//返回数据值</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="IIC"><a href="#IIC" class="headerlink" title="IIC"></a>IIC</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">EEPROM_Write</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> add,<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> dat)</span><br>&#123;<br>	IIC_Start();<br>	IIC_SendByte(<span class="hljs-number">0xa0</span>);<br>	IIC_WaitAck();<br>	IIC_SendByte(add);<br>	IIC_WaitAck();<br>	IIC_SendByte(dat);<br>	IIC_WaitAck();<br>	IIC_Stop();<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">DAC_Write</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> dat)</span><br>&#123;<br>	IIC_Start();<br>	IIC_SendByte(<span class="hljs-number">0x90</span>);<br>	IIC_WaitAck();<br>	IIC_SendByte(<span class="hljs-number">0x40</span>);<br>	IIC_WaitAck();<br>	IIC_SendByte(dat);<br>	IIC_WaitAck();<br>	IIC_Stop();<br>&#125;<br><br><span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> <span class="hljs-title function_">EEPROM_Read</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> add)</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> temp;<br>	<br>	IIC_Start();<br>	IIC_SendByte(<span class="hljs-number">0xa0</span>);<br>	IIC_WaitAck();<br>	IIC_SendByte(add);<br>	IIC_WaitAck();<br><br>	IIC_Start();<br>	IIC_SendByte(<span class="hljs-number">0xa1</span>);<br>	IIC_WaitAck();<br>	temp=IIC_RecByte();<br>	IIC_SendAck(<span class="hljs-number">1</span>);<br>	IIC_Stop();<br>	<br>	<span class="hljs-keyword">return</span> temp;<br>&#125;<br><br><span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> <span class="hljs-title function_">ADC_Read</span><span class="hljs-params">(<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> add)</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> temp;<br>	<br>	IIC_Start();<br>	IIC_SendByte(<span class="hljs-number">0x90</span>);<br>	IIC_WaitAck();<br>	IIC_SendByte(add);<br>	IIC_WaitAck();<br><br>	IIC_Start();<br>	IIC_SendByte(<span class="hljs-number">0x91</span>);<br>	IIC_WaitAck();<br>	temp=IIC_RecByte();<br>	IIC_SendAck(<span class="hljs-number">1</span>);<br>	IIC_Stop();<br>	<br>	<span class="hljs-keyword">return</span> temp;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="DS1302"><a href="#DS1302" class="headerlink" title="DS1302"></a>DS1302</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">void</span> <span class="hljs-title function_">DS1302_Init</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>				<span class="hljs-comment">//DS1302初始化</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> i,add;<br>	add=<span class="hljs-number">0x80</span>;<br>	Write_Ds1302_Byte(<span class="hljs-number">0x8e</span>,<span class="hljs-number">0x00</span>);	<span class="hljs-comment">//关闭写保护</span><br>	<span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)<br>	&#123;<br>		Write_Ds1302_Byte(add,time[i]);<br>		add+=<span class="hljs-number">2</span>;<br>	&#125;<br>	Write_Ds1302_Byte(<span class="hljs-number">0x8e</span>,<span class="hljs-number">0x80</span>);	<span class="hljs-comment">//打开写保护</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">DS1302_Get</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>				<span class="hljs-comment">//时间读取</span><br>&#123;<br>	<span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> i,add;<br>	add=<span class="hljs-number">0x81</span>;<br>	<span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">3</span>;i++)<br>	&#123;<br>		time[i]=Read_Ds1302_Byte(add);<br>		add+=<span class="hljs-number">2</span>;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/23/hexo%E4%B8%8A%E4%BC%A0%E6%96%87%E7%AB%A0/">
+                        <span class="hidden-mobile">hexo上传文章</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
