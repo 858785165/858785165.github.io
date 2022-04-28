@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>解决学习通上看视频鼠标不能移动</title>
+    <link href="/2022/04/28/%E8%A7%A3%E5%86%B3%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%B8%8Ae%C2%BC%E7%9C%8B%E8%A7%86%E9%A2%91%E9%BC%A0%E6%A0%87%E4%B8%8D%E8%83%BD%E7%A7%BB%E5%8A%A8/"/>
+    <url>/2022/04/28/%E8%A7%A3%E5%86%B3%E5%AD%A6%E4%B9%A0%E9%80%9A%E4%B8%8Ae%C2%BC%E7%9C%8B%E8%A7%86%E9%A2%91%E9%BC%A0%E6%A0%87%E4%B8%8D%E8%83%BD%E7%A7%BB%E5%8A%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="⭐解决学习通观看视频鼠标不能移动"><a href="#⭐解决学习通观看视频鼠标不能移动" class="headerlink" title="⭐解决学习通观看视频鼠标不能移动"></a>⭐解决学习通观看视频鼠标不能移动</h1><h2 id="1️⃣step1"><a href="#1️⃣step1" class="headerlink" title="1️⃣step1"></a>1️⃣step1</h2><p>进入学习通视频页面</p><p><img src="https://picgo-1307258360.cos.ap-nanjing.myqcloud.com/image-20220428123124931.png" alt="image-20220428123124931"></p><h2 id="2️⃣step2"><a href="#2️⃣step2" class="headerlink" title="2️⃣step2"></a>2️⃣step2</h2><p>按下F12或者鼠标右击(点击‘检查’)，会出现如下画面。</p><p><img src="https://picgo-1307258360.cos.ap-nanjing.myqcloud.com/image-20220428123327921.png" alt="image-20220428123327921"></p><h2 id="3️⃣step3"><a href="#3️⃣step3" class="headerlink" title="3️⃣step3"></a>3️⃣step3</h2><p>点击如下图所示位置</p><p><img src="https://picgo-1307258360.cos.ap-nanjing.myqcloud.com/image-20220428123448052.png" alt="image-20220428123448052"></p><h2 id="4️⃣step4"><a href="#4️⃣step4" class="headerlink" title="4️⃣step4"></a>4️⃣step4</h2><p>找到mouseout，点击下拉符号，找到Windows，点击<code>Remove</code>按钮</p><p><img src="https://picgo-1307258360.cos.ap-nanjing.myqcloud.com/image-20220428123548107.png" alt="image-20220428123548107"></p><h2 id="5️⃣step5"><a href="#5️⃣step5" class="headerlink" title="5️⃣step5"></a>5️⃣step5</h2><p>点击如下图的关闭。</p><p><img src="https://picgo-1307258360.cos.ap-nanjing.myqcloud.com/image-20220428123820478.png" alt="image-20220428123820478"></p><p>接下来，你的鼠标就可以移出浏览器干别的事了:smiley:</p><h2 id="⚠️注意！！！！"><a href="#⚠️注意！！！！" class="headerlink" title="⚠️注意！！！！"></a>⚠️注意！！！！</h2><blockquote><p>这个操作只针对本页面的视频有效，如果你刷新页面，或者打开其他页面的视频，就要重复上述过程。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>实用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>上海24小时</title>
     <link href="/2022/04/04/%E4%B8%8A%E6%B5%B724%E5%B0%8F%E6%97%B6/"/>
     <url>/2022/04/04/%E4%B8%8A%E6%B5%B724%E5%B0%8F%E6%97%B6/</url>
